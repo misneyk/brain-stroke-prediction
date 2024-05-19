@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  background-color: #770000; /* Background color of the body */
+  color: rgb(241, 236, 236); /* Text color */
+  font-family: 'Merriweather', serif;
+}
+
+.right-aligned {
+  float: right; /* Align the image to the right */
+  margin-left: 10px; /* Optional: Add some space to the left of the image */
+  width: 300px; /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
+}
+.centre-aligned {
+  float: centre; /* Align the image to the right */
+  margin-left: 10px; /* Optional: Add some space to the left of the image */
+  width: 250px; /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
+}
+.left-aligned {
+  float: left; /* Align the image to the right */
+  margin-left: 10px; /* Optional: Add some space to the left of the image */
+  width: 300px; /* Adjust the width of the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+
+h1 {
+  font-family: 'Merriweather', serif;
+  line-height: 1.5;
+  font-size: 3.5rem;
+  font-weight: 900;
+}

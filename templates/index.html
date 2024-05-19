@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><center>Brain Stroke Prediction</center></title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">  
+</head>
+<body>
+    <h1>Brain Stroke Prediction </h1>
+    <img src="static/images/b8.jpeg" alt="b1" class="right-aligned" >
+    <img src="static/images/b3.jpeg" alt="b1" class="right-aligned" >
+    <img src="static/images/b9.jpeg" alt="b9" class="right-aligned" >
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required><br><br>
+        
+        <label for="hypertension">Hypertension (0 for No, 1 for Yes):</label>
+        <input type="text" id="hypertension" name="hypertension" required><br><br>
+        
+        <label for="heart_disease">Heart Disease (0 for No, 1 for Yes):</label>
+        <input type="text" id="heart_disease" name="heart_disease" required><br><br>
+        
+        <label for="avg_glucose_level">Average Glucose Level:</label>
+        <input type="text" id="avg_glucose_level" name="avg_glucose_level" required><br><br>
+        
+        <label for="bmi">BMI:</label>
+        <input type="text" id="bmi" name="bmi" required><br><br>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br><br>
+        
+        <label for="ever_married">Ever Married:</label>
+        <select id="ever_married" name="ever_married" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br><br>
+        
+        <label for="work_type">Work Type:</label>
+        <select id="work_type" name="work_type" required>
+            <option value="Private">Private</option>
+            <option value="Self-employed">Self-employed</option>
+            <option value="Govt_job">Govt_job</option>
+            <option value="children">Children</option>
+            <option value="Never_worked">Never_worked</option>
+        </select><br><br>
+        
+        <label for="Residence_type">Residence Type:</label>
+        <select id="Residence_type" name="Residence_type" required>
+            <option value="Urban">Urban</option>
+            <option value="Rural">Rural</option>
+        </select><br><br>
+        
+        <label for="smoking_status">Smoking Status:</label>
+        <select id="smoking_status" name="smoking_status" required>
+            <option value="formerly smoked">Formerly Smoked</option>
+            <option value="never smoked">Never Smoked</option>
+            <option value="smokes">Smokes</option>
+        </select><br><br>
+        
+        <input type="submit" value="Predict">
+    </form>
+    
+    {% if prediction_text %}
+    <h2>{{ prediction_text }}</h2>
+    {% endif %}
+    <img src="static/images/b7.gif" alt="b1" class="right-aligned" >
+    <img src="static/images/b4.gif" alt="b1" class="right-aligned" >
+    <img src="static/images/b2.jpeg" alt="b1" class="right-aligned" >
+    <img src="static/images/b1.jpeg" alt="b1" class="centre-aligned" >
+
+
+
+
+</body>
+</html>
